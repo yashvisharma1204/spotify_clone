@@ -7,9 +7,14 @@ body{
     padding: 0;
     color: white;
     font-family: 'Poppins';
+
 }
 .nav{
     display: flex;
+    position:sticky;
+    position:-webkit-sticky;
+    top:0;
+    background-color: #000000;
 }
 .logo{
     display: flex;
@@ -49,13 +54,14 @@ body{
 .container .background {
     background-image: url(spotify_back.jpg);
     background-size: 100%;
+    max-height: 100vh;
     filter:opacity(50%)
 }
 .best{
     filter: opacity(100%);
 }
 .container1{
-    width: 80px;
+    width:100px;
     height: 30px;
     position:sticky;
     background-color: rgb(27, 27, 27,0.8);
@@ -63,7 +69,8 @@ body{
     margin-left: 2px;
     font-weight: 700;
     font-size: 16px;
-    padding: 10px 10px;  
+    padding: 10px;
+    text-align: center;  
 }
 span{
     padding-left: 10px;
@@ -73,18 +80,28 @@ img{
     display: block;
 }
 .container2{
-    position: sticky;
-    width: 80px;
-    height: 72vh;
+    position:sticky;
+    position:-webkit-sticky;
+    top: 200px;
+    background-color: #000000;
+    width: 100px;
+    height: 70vh;
     margin-left: 2px;
     margin-top: 5px;
     padding: 10px 10px;  
     border-radius: 10px;
     background-color: rgb(27, 27, 27,0.8);
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.container2::-webkit-scrollbar{
+    width:5px;
+    background-color: #272626;
+    border-radius: 5px;
 }
 .container2 img{
-    padding: 5px;
+    padding: 0 15px;
     width: 70px;
     height: 70px;
     border-radius: 7px;
@@ -93,6 +110,22 @@ img{
 .container2 span{
     padding:0;
     font-size: 12px;
+}
+.container2 p{
+    font-size: 12px;
+    text-align: left;
+}
+.container2 h3{
+    margin-top: 5px;
+}
+.container2::after{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 3px;
+    background:#32ea4b;
+    top:4px;
+    left:0px;
 }
 #best .box1{
     top: 60%;
@@ -122,9 +155,10 @@ img{
     display: grid;
     grid-template-columns: 100px 100px;
     padding: 15px;
+    cursor: pointer;
 }
 .box1 ul li span{
-    padding-left: 150px;
+    padding-left: 180px;
 }
 .box1 ul li img{
     border-radius: 50%;
