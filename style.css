@@ -1,67 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    background-color: antiquewhite;
+    background-color: #000000;
 }
 *{
     margin: 0;
     padding: 0;
-}
-nav{
-    font-family: 'Poppins', sans-serif;
-}
-nav ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    height: 60px;
-    background-color: black;
     color: white;
-}
-nav ul li{
-    padding: 0 12px;
-}
-.brand img{
-    width: 50px;
-    padding: 0 8px;
-}
-.brand{
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.5rem;
-}
-.container{
-    min-height: 72vh;
-    background-color: black;
-    color: rgb(0, 0, 0);
     font-family: 'Poppins';
+}
+.nav{
     display: flex;
-    width:70%;
-    margin: 23px auto;
-    border-radius: 12px;
-    padding: 30px;
-    background-image: url("spotify_back.jpg");
-    background-size: 100%;
-    text-shadow: 0 0 3px white;
 }
-.bottom{
+.logo{
     display: flex;
-    position: sticky;
-    height: 120px;
-    background-color: black;
-    bottom:0;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction:row;
+    width:80%;
 }
-#myprogress{
-    width:80vw;
+.logo p{
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
 }
-.icons{
-    margin-top: 18px;
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+.search input{
+    height: 30px;
+    width: 200px;
+    margin: 5px;
+    background-color: rgb(27, 27, 27);
+    border-color: transparent;
+    border-radius: 10px;
+}
+.search button{
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    margin: 10px 0;
+    background-color: transparent;
     cursor: pointer;
 }
-.icons .fa-sharp:last-child{
-    rotate: 180deg;
+.container{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+.container .background {
+    background-image: url(spotify_back.jpg);
+    background-size: 100%;
+    filter:opacity(50%)
+}
+.best{
+    filter: opacity(100%);
+}
+.container1{
+    width: 80px;
+    height: 30px;
+    position:sticky;
+    background-color: rgb(27, 27, 27,0.8);
+    border-radius: 10px;
+    margin-left: 2px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 10px;  
+}
+span{
+    padding-left: 10px;
+}
+img{
+    height:50px;
+    display: block;
+}
+.container2{
+    position: sticky;
+    width: 80px;
+    height: 72vh;
+    margin-left: 2px;
+    margin-top: 5px;
+    padding: 10px 10px;  
+    border-radius: 10px;
+    background-color: rgb(27, 27, 27,0.8);
+    text-align: center;
+}
+.container2 img{
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.container2 span{
+    padding:0;
+    font-size: 12px;
+}
+#best .box1{
+    top: 60%;
+    left: 30%;
+    background-color: #000000;
+    width: 400px;
+    height: 350px;
+    border-radius: 12px;
+    padding: 10px;
+}
+#best h1, .box1{
+    position: absolute;
+    font-size: 40px;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 3px #212121;
+}
+.box1 ul li{
+    display: flex;
+    list-style-type:none;
+    font-size: 14px;
+    padding: 10px;
+}
+.box1 ul li p{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    padding: 15px;
+}
+.box1 ul li span{
+    padding-left: 150px;
+}
+.box1 ul li img{
+    border-radius: 50%;
 }
